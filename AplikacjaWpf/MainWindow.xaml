@@ -1,0 +1,30 @@
+﻿<Window x:Class="AdvancedClicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Advanced Clicker" Height="250" Width="350">
+    <Grid Background="BlanchedAlmond">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Ilość kliknięć:" Margin="10" Grid.Row="0"/>
+        <Label x:Name="lblClickCount" Content="0" Grid.Row="0" HorizontalAlignment="Right" Margin="10"/>
+
+        <Label Content="Level Mnożnika:" Margin="10" Grid.Row="1"/>
+        <Label x:Name="lblMultiplierLevel" Content="1x" Grid.Row="1" HorizontalAlignment="Right" Margin="10"/>
+
+        <Button Content="Kliknij mnie!" Click="ButtonClick" Grid.Row="2" HorizontalAlignment="Center" Margin="10" Background="white">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Ulepsz mnożnik (Koszt: 10)" Click="UpgradeMultiplier" Grid.Row="3" HorizontalAlignment="Center" Margin="10" Background="white" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
